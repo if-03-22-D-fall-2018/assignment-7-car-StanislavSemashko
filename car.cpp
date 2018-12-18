@@ -17,8 +17,8 @@ struct CarImplimintation aixam1{AIXAM, RED, 16.0, 0.0, 0};
 struct CarImplimintation fiat1{FIAT_MULTIPLA, GREEN, 65.0, 0.0, 0};
 struct CarImplimintation fiat2{FIAT_MULTIPLA, BLUE, 65.0, 0.0, 0};
 struct CarImplimintation fiat3{FIAT_MULTIPLA, ORANGE ,65.0, 0.0, 0};
-struct CarImplimintation jeep1{JEEP, SILVER, 16.0, 0.0, 0};
-struct CarImplimintation jeep2{JEEP, BLACK, 16.0, 0.0, 0};
+struct CarImplimintation jeep1{JEEP, SILVER, 80.0, 0.0, 0};
+struct CarImplimintation jeep2{JEEP, BLACK, 80.0, 0.0, 0};
 
 Car car_park[6]={&aixam1, &fiat1, & fiat2, &fiat3, &jeep1, &jeep2};
 
