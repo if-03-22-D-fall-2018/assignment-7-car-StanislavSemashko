@@ -48,7 +48,7 @@ double get_fill_level(Car car)
 }
 double get_acceleration_rate(Car car)
 {
-  return 0;
+  return car->acceleration_rate;
 }
 int get_speed(Car car)
 {
@@ -59,11 +59,12 @@ void init()
   for (int i = 0; i < 6; i++)
   {
     car_park[i]->is_available = true;
+    car_park[i]->acceleration_rate = 0;
   }
 }
 void set_acceleration_rate(Car car, int acceleration)
 {
-
+  car->acceleration_rate += acceleration;
 }
 void accelerate(Car car)
 {
