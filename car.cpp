@@ -56,7 +56,10 @@ int get_speed(Car car)
 }
 void init()
 {
-
+  for (int i = 0; i < 6; i++)
+  {
+    car_park[i]->is_available = true;
+  }
 }
 void set_acceleration_rate(Car car, int acceleration)
 {
