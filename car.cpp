@@ -44,7 +44,7 @@ Color get_color(Car car)
 }
 double get_fill_level(Car car)
 {
-  return 0;
+  return car->fill_level;
 }
 double get_acceleration_rate(Car car)
 {
