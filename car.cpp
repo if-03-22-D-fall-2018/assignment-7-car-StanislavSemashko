@@ -54,7 +54,7 @@ double get_acceleration_rate(Car car)
 }
 int get_speed(Car car)
 {
-  return 0;
+  return car->speed;
 }
 void init()
 {
@@ -81,5 +81,5 @@ void set_acceleration_rate(Car car, double acceleration)
 }
 void accelerate(Car car)
 {
-
+  car->speed = car->acceleration_rate * 4;
 }
