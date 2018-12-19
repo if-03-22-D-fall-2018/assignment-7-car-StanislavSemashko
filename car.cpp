@@ -9,16 +9,17 @@ struct CarImplimintation
   double acceleration_rate;
   int speed;
   bool is_available = true;
+  double maximum_acceleration;
 
 };
 
 
-struct CarImplimintation aixam1{AIXAM, RED, 16.0, 0.0, 0};
-struct CarImplimintation fiat1{FIAT_MULTIPLA, GREEN, 65.0, 0.0, 0};
-struct CarImplimintation fiat2{FIAT_MULTIPLA, BLUE, 65.0, 0.0, 0};
-struct CarImplimintation fiat3{FIAT_MULTIPLA, ORANGE ,65.0, 0.0, 0};
-struct CarImplimintation jeep1{JEEP, SILVER, 80.0, 0.0, 0};
-struct CarImplimintation jeep2{JEEP, BLACK, 80.0, 0.0, 0};
+struct CarImplimintation aixam1{AIXAM, RED, 16.0, 0.0, 0, true, 1};
+struct CarImplimintation fiat1{FIAT_MULTIPLA, GREEN, 65.0, 0.0, 0, true,2.26};
+struct CarImplimintation fiat2{FIAT_MULTIPLA, BLUE, 65.0, 0.0, 0, true, 2.26};
+struct CarImplimintation fiat3{FIAT_MULTIPLA, ORANGE ,65.0, 0.0, 0, true, 2.26};
+struct CarImplimintation jeep1{JEEP, SILVER, 80.0, 0.0, 0, true, 3.14};
+struct CarImplimintation jeep2{JEEP, BLACK, 80.0, 0.0, 0, true, 3.14};
 
 Car car_park[6]={&aixam1, &fiat1, & fiat2, &fiat3, &jeep1, &jeep2};
 
@@ -62,9 +63,16 @@ void init()
     car_park[i]->acceleration_rate = 0;
   }
 }
-void set_acceleration_rate(Car car, int acceleration)
+void set_acceleration_rate(Car car, double acceleration)
 {
-  car->acceleration_rate += acceleration;
+  if (acceleration > car->maximum_acceleration)
+  {
+    car->acceleration_rate = car->maximum_acceleration;
+  }
+  else
+  {
+      car->acceleration_rate = acceleration;
+  }
 }
 void accelerate(Car car)
 {
