@@ -62,6 +62,7 @@ void init()
   {
     car_park[i]->is_available = true;
     car_park[i]->acceleration_rate = 0;
+    car_park[i]->speed = 0;
   }
 }
 void set_acceleration_rate(Car car, double acceleration)
